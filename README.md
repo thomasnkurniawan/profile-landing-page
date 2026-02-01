@@ -1,6 +1,5 @@
-# React + Tailwind Starter
-
-Quick starter for small projects.
+# Profile Landing Page
+Profile Landing Page is a my profile.
 
 ## Stack
 - React (Vite)
