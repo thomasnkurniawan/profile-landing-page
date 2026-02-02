@@ -1,17 +1,16 @@
-import MainLayout from "../layouts/MainLayout";
-import Navbar from "../components/ui/Navbar";
+import MainLayout from "../components/templates/MainLayout";
+import HeroSection from "../components/templates/section/HeroSection";
+import Skills from "../components/templates/section/Skills";
+import Experience from "../components/templates/section/Experience";
+import Contacts from "../components/templates/section/Contacts";
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
-      <MainLayout>
-        {/* Navbar: Profile Skills Experience Contact */}
-        {/* Section Profile: Name, alias, quotes */}
-        {/* Section Skills */}
-        {/* Section Experience */}
-        {/* Section Contact */}
-      </MainLayout>
-    </>
+    <MainLayout>
+      <HeroSection />
+      <Skills />
+      <Experience />
+      <Contacts />
+    </MainLayout>
   );
 }
