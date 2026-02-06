@@ -1,59 +1,51 @@
-import {
-  RiLinkedinFill,
-  RiInstagramFill,
-  RiTiktokFill,
-} from "@remixicon/react";
+import Button from "../atoms/Button";
 
 export default function Navbar() {
+  const navLinks = [
+    { label: "Skills", href: "#skills" },
+    { label: "Experience", href: "#experience" },
+    { label: "Projects", href: "#projects" },
+    { label: "Contact", href: "#contact" },
+  ];
+
   return (
-    <nav className="sticky top-0 z-50 bg-slate-50 border-b border-neutral-800">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="flex gap-3">
-          <a href="#">
-            <RiTiktokFill className="w-6 h-6" />
-          </a>
-          <a href="#">
-            <RiLinkedinFill className="w-6 h-6" />
-          </a>
-          <a href="#">
-            <RiInstagramFill className="w-6 h-6" />
-          </a>
-        </div>
-        <div className="flex items-center">
+    <header className="fixed top-0 left-0 w-full z-50">
+      <div className="backdrop-blur-md bg-white/70 border-b border-neutral-200">
+        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+          
+          {/* Logo / Name */}
           <a
             href="#"
-            className="px-4 py-2 text-black rounded-tl-lg hover:bg-slate-100"
+            className="text-sm font-semibold tracking-tight text-neutral-900"
           >
-            PROFILE
+            Tomi Sedunia.
           </a>
-          <a
-            href="#"
-            className="px-4 py-2 text-black rounded-none hover:bg-slate-100"
-          >
-            SKILLS
-          </a>
-          <a
-            href="#"
-            className="px-4 py-2 text-black rounded-none hover:bg-slate-100"
-          >
-            EXPERIENCES
-          </a>
-          <a
-            href="#"
-            className="px-4 py-2 text-black rounded-r-lg hover:bg-slate-100"
-          >
-            CONTACTS
-          </a>
-        </div>
-        <div className="flex items-center">
-          <a
-            href="#"
-            className="px-4 py-2 text-black rounded-tl-lg hover:bg-slate-100"
-          >
-            tomisedunia@gmail.com
-          </a>
+
+          {/* Links */}
+          <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-600">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="hover:text-neutral-900 transition"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+
+          {/* CTA */}
+          <div className="flex items-center gap-3">
+            <a href="#contact" className="hidden sm:block">
+              <Button variant="ghost">Let’s Talk</Button>
+            </a>
+
+            <a href="#projects">
+              <Button variant="primary">Projects</Button>
+            </a>
+          </div>
         </div>
       </div>
-    </nav>
+    </header>
   );
 }

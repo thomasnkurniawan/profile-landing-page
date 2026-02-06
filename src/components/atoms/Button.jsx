@@ -1,30 +1,25 @@
-import { cn } from '../../utils/cn'
-
 export default function Button({
   children,
-  variant = 'primary',
-  size = 'md',
-  disabled,
-  className,
+  variant = "primary",
+  className = "",
   ...props
 }) {
+  const base =
+    "inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium transition active:scale-[0.98]";
+
+  const variants = {
+    primary:
+      "bg-neutral-900 text-white hover:bg-neutral-800 shadow-sm",
+    ghost:
+      "border border-neutral-200 bg-white text-neutral-900 hover:bg-neutral-50",
+  };
+
   return (
     <button
-      disabled={disabled}
-      className={cn(
-        'rounded-lg font-medium transition focus:outline-none',
-        size === 'sm' && 'px-3 py-1.5 text-sm',
-        size === 'md' && 'px-4 py-2',
-        size === 'lg' && 'px-5 py-3 text-lg',
-        variant === 'primary' && 'bg-black text-white hover:bg-slate-800',
-        variant === 'secondary' && 'bg-slate-200 hover:bg-slate-300',
-        variant === 'danger' && 'bg-red-500 text-white hover:bg-red-600',
-        disabled && 'opacity-50 cursor-not-allowed',
-        className
-      )}
+      className={`${base} ${variants[variant]} ${className}`}
       {...props}
     >
       {children}
     </button>
-  )
+  );
 }

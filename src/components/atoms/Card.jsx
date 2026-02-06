@@ -1,18 +1,7 @@
-import { cn } from '../../utils/cn'
-
-export default function Card({ children, className, background }) {
+export default function Card({ children, className = "" }) {
   return (
-    <div
-      className={cn(
-        'rounded-xl border p-4 shadow-sm',
-        className,
-        background === 'white' && 'bg-white',
-        background === 'black' && 'bg-black',
-        background === 'slate' && 'bg-slate-50',
-        background === 'gray' && 'bg-gray-50',
-      )}
-    >
+    <div className={`card card-hover ${className}`}>
       {children}
     </div>
-  )
+  );
 }
