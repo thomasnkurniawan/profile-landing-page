@@ -9,7 +9,7 @@ export default function Projects() {
       title: "React Vite Starter",
       desc: "A minimal React + Vite template with Tailwind, TypeScript, and ESLint configured.",
       stack: ["React", "Vite", "Tailwind", "TypeScript"],
-      demo: "#",
+      demo: "https://vite-react-tailwind-starter-tmsdna.vercel.app/",
       github: "https://github.com/thomasnkurniawan/vite-react-tailwind-starter",
     },
     {
