@@ -6,25 +6,39 @@ import Reveal from "../../atoms/Reveal";
 export default function Projects() {
   const projects = [
     {
-      title: "Finansialku",
-      desc: "Personal finance tracker SaaS for income & expense management with AI insights.",
-      stack: ["Next.js", "Supabase", "Tailwind", "AI"],
+      title: "React Vite Starter",
+      desc: "A minimal React + Vite template with Tailwind, TypeScript, and ESLint configured.",
+      stack: ["React", "Vite", "Tailwind", "TypeScript"],
       demo: "#",
-      github: "#",
+      github: "https://github.com/thomasnkurniawan/vite-react-tailwind-starter",
     },
     {
-      title: "Knowledge Hub",
-      desc: "Content platform with search, filter, sorting, and pagination powered by CMS.",
-      stack: ["React", "Strapi", "REST API", "Tailwind"],
-      demo: "#",
-      github: "#",
+      title: "Our Little Universe",
+      desc: "A digital space to share memories, notes, and love",
+      stack: ["React", "Tailwind", "Supabase", "Framer Motion"],
+      demo: "https://our-little-universe-tawny.vercel.app/",
+      github: "https://github.com/thomasnkurniawan/our-little-universe",
     },
     {
-      title: "Minimal Portfolio Template",
+      title: "Profile Landing Page",
       desc: "A minimalist monochrome portfolio starter template with reusable components.",
       stack: ["React", "Tailwind", "UI System"],
+      demo: "https://profile-landing-page-thomasnkurniawan.vercel.app/",
+      github: "https://github.com/thomasnkurniawan/profile-landing-page",
+    },
+    {
+      title: "Freelance Rate Calculator",
+      desc: "A simple calculator to help freelancers determine their hourly rate based on desired annual income and working hours.",
+      stack: ["React", "Tailwind", "Vite"],
       demo: "#",
-      github: "#",
+      github: "https://github.com/thomasnkurniawan/freelance-rate-calculator",
+    },
+    {
+      title: "Gajian Allocator",
+      desc: "A simple app to help you allocate your salary into different categories.",
+      stack: ["React", "Tailwind", "Vite"],
+      demo: "#",
+      github: "https://github.com/thomasnkurniawan/budget-planner",
     },
   ];
 

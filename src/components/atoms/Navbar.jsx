@@ -8,6 +8,16 @@ export default function Navbar() {
     { label: "Contact", href: "#contact" },
   ];
 
+  // scroll to id
+  const scrollToId = (id) => {
+    setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 100);
+  };
+
   return (
     <header className="fixed top-0 left-0 w-full z-50">
       <div className="backdrop-blur-md bg-white/70 border-b border-neutral-200">
@@ -36,11 +46,11 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="flex items-center gap-3">
-            <a href="#contact" className="hidden sm:block">
+            <a href="#contact" className="hidden sm:block" onClick={() => scrollToId('contact')}>
               <Button variant="ghost">Let’s Talk</Button>
             </a>
 
-            <a href="#projects">
+            <a href="#projects" onClick={() => scrollToId('projects')}>
               <Button variant="primary">Projects</Button>
             </a>
           </div>

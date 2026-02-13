@@ -1,13 +1,22 @@
 import { RiArrowDownDoubleLine } from "@remixicon/react";
-import Reveal from "../../atoms/Reveal";
 
 /**
  * Hero Section = Profile Section
  * @returns {JSX.Element}
  */
 export default function HeroSection() {
+
+  // scroll to id
+  const scrollToId = () => {
+    setTimeout(() => {
+      document.getElementById("skills")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 100);
+  };
+
   return (
-    <Reveal>
       <section className="relative grid grid-cols-1 md:grid-cols-1 gap-24 items-center py-24 overflow-hidden">
         {/* background layer */}
         <div className="absolute inset-0 -z-10">
@@ -36,14 +45,13 @@ export default function HeroSection() {
 
         {/* button scroll next section with icon */}
         <div className="flex items-center justify-center my-4">
-          <a
-            href="#about"
+          <button
+            onClick={() => scrollToId()}
             className="text-neutral-400 hover:text-neutral-200 transition"
           >
             <RiArrowDownDoubleLine className="w-6 h-6 animate-bounce" />
-          </a>
+          </button>
         </div>
       </section>
-    </Reveal>
   );
 }

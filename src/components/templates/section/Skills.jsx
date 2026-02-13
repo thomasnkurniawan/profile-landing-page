@@ -38,7 +38,10 @@ export default function Skills() {
 
   return (
     <Reveal>
-      <section className="relative flex flex-col items-center py-32 mx-auto px-6 gap-12">
+      <section
+        className="relative flex flex-col items-center py-32 mx-auto px-6 gap-12"
+        id="skills"
+      >
         <div className="absolute top-0 left-1/2 w-[90%] max-w-6xl -translate-x-1/2 border-t border-neutral-200" />
 
         <div className="flex flex-col items-center">
